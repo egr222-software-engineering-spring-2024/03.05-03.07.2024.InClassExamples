@@ -47,4 +47,14 @@ public class Point {
     public String toString() {
         return "(" + x + ", " + y + ")";
     }
+
+    @Override
+    public boolean equals(Object other) {
+        if (other != null && getClass() == other.getClass()) {
+            Point o = (Point) other;
+            return x == o.x && y == o.y;
+        } else {
+            return false;
+        }
+    }
 }
